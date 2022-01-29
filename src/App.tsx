@@ -10,6 +10,8 @@ import Character from './Components/Character/Character';
 import { AllCharactersContainer } from './Components/Styles/Character.styled';
 import Header from './Components/Header/Header';
 
+const lower = (text: string) => text.toLowerCase();
+
 const App = () => {
   const [inputValue, setInputValue] = useState('');
   const [secondValue, setSecondValue] = useState('');
@@ -33,7 +35,7 @@ const App = () => {
 
   if (inputValue === secondValue) {
     filteredArray = characterArray
-      .filter(({ name }) => name.toLowerCase().indexOf(inputValue.toLowerCase()) > -1);
+      .filter(({ name }) => lower(name).indexOf(lower(inputValue)) > -1);
   }
 
   return (
