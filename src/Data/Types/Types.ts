@@ -18,3 +18,13 @@ export type CharacterType = {
         url: string,
         created: string,
 }
+
+export type WholeApiType = {
+    info: {
+        count: number,
+        pages: number,
+        next: string,
+        prev: null
+      },
+    results:CharacterType[]
+}
