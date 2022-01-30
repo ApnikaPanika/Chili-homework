@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import './Reset.scss';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -7,7 +8,7 @@ import { CharacterType, WholeApiType } from './Data/Types/Types';
 import { InputContainer } from './Components/Styles/Input.styled';
 import Input from './Components/Input/InputClass';
 import Character from './Components/Character/Character';
-import { AllCharactersContainer } from './Components/Styles/Character.styled';
+import { AllCharactersContainer, NoCharactersFound } from './Components/Styles/Character.styled';
 import Header from './Components/Header/Header';
 
 const lower = (text: string) => text.toLowerCase();
@@ -47,12 +48,17 @@ const App = () => {
       </InputContainer>
 
       <AllCharactersContainer>
-        {inputValue === secondValue
-          ? filteredArray.map(({ id, name, image }) => (
-            <Character name={name} image={image} key={id} />
-          ))
-          : <Triangle color="#ff3a46" height={200} width={200} />}
+        {
+          inputValue !== secondValue
+            ? <Triangle color="#ff3a46" height={200} width={200} />
+            : filteredArray.length === 0
+              ? <NoCharactersFound>No characters found</NoCharactersFound>
+              : filteredArray.map(({ id, name, image }) => (
+                <Character name={name} image={image} key={id} />
+              ))
+        }
       </AllCharactersContainer>
+
     </div>
   );
 };

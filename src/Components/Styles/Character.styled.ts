@@ -24,6 +24,14 @@ gap: 20px;
 margin: 0px 20px;
 `;
 
+const NoCharactersFound = styled.h1`
+font-size: 40px;
+font-weight: bold;
+color: white;
+text-align: center;
+margin-top: 50px;
+`;
+
 export {
-  CharacterContainer, AllCharactersContainer, CharacterPhoto, CharacterName,
+  CharacterContainer, AllCharactersContainer, CharacterPhoto, CharacterName, NoCharactersFound,
 };
