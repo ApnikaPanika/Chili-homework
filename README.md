@@ -32,15 +32,16 @@ In project I use libraries like: react loader spinner, Axios, styled components.
 
 Start with:
 
+### `npm install`
+
+To install all the dependencies.
+
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Optional:
 
 ### `npm run build`
 
@@ -51,6 +52,8 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+<br/>
 
 Hope you enjoy,
 Toms <img src="https://cdn-icons-png.flaticon.com/512/742/742751.png" width="18" height="18"/>
